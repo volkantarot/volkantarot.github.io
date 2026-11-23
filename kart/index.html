@@ -344,6 +344,7 @@ textarea.pq-in{min-height:100px;resize:vertical}
 .subnav a.hot{color:#1a1300;background:linear-gradient(180deg,#f3d48a,#e8bd5a);border-color:transparent;font-weight:700}
 @media (max-width:480px){#pqDeck{grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}.pq-price{font-size:21px}}
 </style>
+<link rel="stylesheet" href="tema.css">
 </head>
 <body>
 <canvas id="stars" aria-hidden="true"></canvas>
@@ -368,8 +369,10 @@ textarea.pq-in{min-height:100px;resize:vertical}
   </nav>
 
   <section class="hero">
+    <div class="hero-fan stack" aria-hidden="true"><img src="cards/m17.jpg" alt="" width="300" height="520"><img src="cards/m06.jpg" alt="" width="300" height="520" fetchpriority="high"><img src="cards/m10.jpg" alt="" width="300" height="520"></div>
     <h1 data-i="h1"></h1>
     <p data-i="heroP"></p>
+    <a class="hero-cta" href="#setup" data-i="heroCta">Kartlarını seç</a>
   </section>
 
   <section class="panel daily" id="daily" aria-labelledby="dailyH">
@@ -548,6 +551,7 @@ textarea.pq-in{min-height:100px;resize:vertical}
 <script src="data_ar.js"></script>
 <script src="i18n_base.js"></script>
 <script src="i18n_ext.js"></script>
+<script>UI.tr.heroCta="Kartlarını seç";UI.en.heroCta="Pick your cards";UI.ar.heroCta="اختر بطاقاتك";</script>
 <script src="paid.js"></script>
 <script src="app.js"></script>
 </body>
