@@ -1,0 +1,32 @@
+/* Volkan Tarot — profesyonel hareket katmanı (fx) */
+
+/* 1) Deste: kartlar masaya serilmiş gibi üst üste biner, sayfa kısalır */
+.deck.fx-stack{padding-bottom:var(--ov,0px)}
+.deck.fx-stack .dcard{position:relative;margin-bottom:calc(var(--ov,0px) * -1);rotate:var(--rot,0deg);
+  transition:translate .28s cubic-bezier(.2,.8,.2,1),box-shadow .28s,opacity .3s,filter .28s;
+  box-shadow:0 -2px 0 rgba(232,189,90,.25),0 8px 16px rgba(0,0,0,.45)}
+.deck.fx-stack .dcard:hover,.deck.fx-stack .dcard:focus-visible{translate:0 -14px;z-index:3;filter:brightness(1.12);
+  box-shadow:0 0 0 1px rgba(232,189,90,.7),0 16px 30px rgba(232,189,90,.35)}
+.deck.fx-stack.locked .dcard:hover{translate:none;filter:none}
+
+/* 2) Kart açılınca etrafında altın parlama */
+.slot .frame.fx-glow{animation:fxGlow 1.6s ease-out both}
+@keyframes fxGlow{0%{box-shadow:0 0 0 0 rgba(232,189,90,0)}25%{box-shadow:0 0 0 3px rgba(255,217,138,.9),0 0 38px 8px rgba(232,189,90,.55)}100%{box-shadow:0 0 0 1px rgba(232,189,90,.45),0 0 22px 2px rgba(232,189,90,.22)}}
+
+/* 3) Başlıkta yavaş geçen altın ışık */
+.hero h1.fx-shine{background-image:linear-gradient(100deg,#e8bd5a 0%,#fff3d1 18%,#e8bd5a 30%,#c99a3a 50%,#e8bd5a 70%,#fff3d1 82%,#e8bd5a 100%)!important;
+  background-size:300% 100%!important;animation:fxShine 7s ease-in-out infinite}
+@keyframes fxShine{0%,25%{background-position:100% 0}75%,100%{background-position:0 0}}
+
+/* 4) Kaydırınca bölümlerin yumuşakça belirmesi */
+.fx-hide{opacity:0;translate:0 26px}
+.fx-in{opacity:1;translate:0 0;transition:opacity .7s ease,translate .7s cubic-bezier(.2,.8,.2,1)}
+
+/* 5) Sonuçtaki WhatsApp butonu: hafif nabız */
+.wa-big.fx-pulse{animation:fxPulse 2.6s ease-in-out infinite}
+@keyframes fxPulse{0%,100%{box-shadow:0 12px 34px rgba(47,195,154,.35),0 0 0 0 rgba(47,195,154,.45)}50%{box-shadow:0 12px 34px rgba(47,195,154,.45),0 0 0 12px rgba(47,195,154,0)}}
+
+@media (prefers-reduced-motion:reduce){
+  .hero h1.fx-shine,.wa-big.fx-pulse,.slot .frame.fx-glow{animation:none}
+  .fx-hide{translate:none}
+}
