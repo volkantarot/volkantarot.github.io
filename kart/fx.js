@@ -72,18 +72,8 @@
     if (wa) setTimeout(() => wa.classList.add("fx-pulse"), RM ? 0 : 400 + kids.length * 160);
   }).observe(reading, { childList: true });
 
-  /* 5) Başlıkta altın ışık */
-  const h1 = $(".hero h1"); if (h1 && !RM) h1.classList.add("fx-shine");
+  /* 5) Açılışta üç kart yelpaze gibi açılır (sayfanın tek büyük hareketi) */
+  const fan = $(".hero-fan");
+  if (fan) setTimeout(() => fan.classList.remove("stack"), RM ? 0 : 350);
 
-  /* 6) Aşağıdaki bölümler kaydırınca yumuşakça belirir */
-  if (!RM && "IntersectionObserver" in window){
-    const io = new IntersectionObserver(es => es.forEach(e => {
-      if (e.isIntersecting){ e.target.classList.add("fx-in"); e.target.classList.remove("fx-hide"); io.unobserve(e.target); }
-    }), { threshold: 0.06 });
-    $$("main > section, main > .panel, .panel").forEach(el => {
-      if (el.id === "paid" || el.closest("#paid")) return;
-      const r = el.getBoundingClientRect();
-      if (r.top > innerHeight * 0.92){ el.classList.add("fx-hide"); io.observe(el); }
-    });
-  }
 })();
