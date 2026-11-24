@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Volkan Tarot Bakımlarımız</title>
+<meta name="description" content="Aşk açılımları, tarot, su falı, mum falı ve enerji çalışmaları. Sesli ve görüntülü bakım; randevu için WhatsApp: 0535 041 67 78">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Volkan Tarot">
+<meta property="og:title" content="Volkan Tarot · Bakımlarımız ve Randevu">
+<meta property="og:description" content="Aşk açılımları, tarot, su falı, mum falı ve enerji çalışmaları. Randevu için WhatsApp: 0535 041 67 78">
+<meta property="og:url" content="https://volkantarot.github.io/bakim/">
+<meta property="og:image" content="https://volkantarot.github.io/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#3d0a19">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: lüks, gizemli, güven veren; kısa dokun-ve-gir menü
+   IDEA: masaya açılmış bir tarot destesi — her bölüm numaralı, altın çizgili bir kart
+   PICTURE: ince altın çizgi amblemler (kalp, kartlar, su kasesi, mum, ayna, telefon, göz), yumuşak altın ışık
+   COLOUR and TYPE: kömür siyahı, altın degrade, fildişi metin; Cinzel başlık + Manrope
+   LAYOUT: ortalı giriş + kart ızgarası; bölüm ekranı: amblemli kapak, açılır seçenek listesi */
+:root{color-scheme:dark;--bg:#1c060e;--panel:#2a0812;--panel2:#3d0a19;--ink:#f6e7d6;--soft:#d9b8aa;--gold:#e3b04b;--line:#5c2a22;--g:linear-gradient(180deg,#f6d98b 0%,#e3b04b 50%,#b8862f 100%)}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Figtree,system-ui,sans-serif;overflow-x:clip;
+background-image:radial-gradient(ellipse 90% 55% at 50% -10%,#7a1735bb,transparent),radial-gradient(circle at 15% 40%,#ffffff05 1px,transparent 1px),radial-gradient(circle at 70% 70%,#ffffff06 1px,transparent 1px);background-size:auto,23px 23px,31px 31px}
+h1,h2,h3{font-family:Marcellus,Georgia,serif;font-weight:400;line-height:1.12;text-wrap:balance;margin:0}
+.gt{background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1{font-size:clamp(28px,5vw,44px)}h2{font-size:clamp(26px,4vw,38px)}h3{font-size:18px}
+p{margin:0 0 10px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 max(4vw,16px)}
+.top{text-align:center;padding:clamp(34px,6vw,64px) 0 clamp(24px,4vw,36px)}
+.brand{font-family:Marcellus,Georgia,serif;font-size:15px;letter-spacing:.32em;color:var(--gold);display:flex;align-items:center;justify-content:center;gap:14px}
+.brand::before,.brand::after{content:"";width:46px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.brand::after{transform:scaleX(-1)}
+.top h1{margin-top:14px}
+.top p{color:var(--soft);max-width:52ch;margin:14px auto 0;font-size:16.5px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;justify-content:center}
+.pill{border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:13.5px;display:inline-flex;gap:7px;align-items:center;color:var(--ink);background:#ffffff05}
+.pill svg{width:15px;height:15px;stroke:var(--gold);fill:none;stroke-width:1.8}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));gap:18px;padding:6px 0 40px}
+.tile{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;color:inherit;background:linear-gradient(180deg,#3d0a19,#22060f);border:1px solid #6e3a2a;border-radius:14px;padding:16px 14px 20px;transition:transform .3s,box-shadow .3s;box-shadow:0 10px 30px #0008}
+.tile::before{content:"";position:absolute;inset:7px;border:1px solid #e3b04b33;border-radius:9px;pointer-events:none}
+.tile:hover{transform:translateY(-5px);box-shadow:0 18px 40px #000a,0 0 0 1px #e3b04b66}
+.tile:focus-visible,.back:focus-visible,.btn:focus-visible,summary:focus-visible,.chips button:focus-visible,.tc:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.num{font-family:Marcellus,Georgia,serif;font-size:13px;color:var(--gold);letter-spacing:.15em}
+.em{display:block;width:72%;max-width:150px;aspect-ratio:1;margin:8px 0 10px;color:var(--gold);background:radial-gradient(circle,#e3b04b26,transparent 65%)}
+.em svg{width:100%;height:100%;display:block;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 6px #e3b04b55)}
+.tile h3{font-size:17px}
+.tile p{color:var(--soft);font-size:13.5px;line-height:1.4;margin:6px 0 0}
+.cnt{margin-top:10px;font-size:12px;color:var(--gold);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+.view[hidden]{display:none}
+.cover{position:relative;overflow:hidden;text-align:center;padding:64px 0 26px;border-bottom:1px solid var(--line);background:radial-gradient(ellipse 60% 70% at 50% 40%,#e3b04b1f,transparent 70%)}
+.cover .em{width:clamp(120px,22vw,170px);margin:0 auto 12px}
+.cover .num{display:block;margin-bottom:4px}
+.back{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:#1c060ec0;color:var(--ink);text-decoration:none;font-weight:600;font-size:14px;position:absolute;top:14px;left:max(4vw,16px)}
+.intro{font-size:16.5px;color:var(--soft);max-width:62ch;margin:20px auto 8px;text-align:center}
+.list{margin:16px auto 40px;display:grid;gap:10px;max-width:760px}
+details{background:var(--panel);border:1px solid var(--line);border-radius:14px;transition:border-color .2s}
+summary{list-style:none;cursor:pointer;display:flex;gap:14px;align-items:center;padding:14px 16px;min-height:64px}
+summary::-webkit-details-marker{display:none}
+summary .ic{width:38px;height:38px;flex:none;stroke:var(--gold);fill:none;stroke-width:1.5}
+summary b{font-family:Marcellus,Georgia,serif;font-weight:600;font-size:16.5px;display:block;line-height:1.25}
+summary span{color:var(--soft);font-size:14px}
+summary::after{content:"";width:9px;height:9px;border-right:1.5px solid var(--gold);border-bottom:1.5px solid var(--gold);transform:rotate(45deg);margin:0 4px 4px auto;flex:none;transition:transform .2s}
+details[open] summary::after{transform:rotate(-135deg);margin-bottom:-4px}
+details[open]{border-color:#a0763a;background:var(--panel2)}
+.body{padding:0 18px 18px 68px;color:#e6dcc8}
+.body ul{margin:4px 0 12px;padding-left:18px}.body li{margin-bottom:4px}.body li::marker{color:var(--gold)}
+.q{font-size:14.5px;color:var(--soft);border-top:1px solid var(--line);padding-top:10px}
+.q b{color:var(--gold)}
+@media(max-width:600px){.body{padding:0 16px 16px}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 22px;border-radius:999px;background:var(--g);color:#1a1206;font-weight:700;text-decoration:none;border:0;font-size:15px;margin-top:12px;box-shadow:0 6px 20px #e3b04b33}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:8px}
+.chips button{font:600 14px Figtree,sans-serif;min-height:42px;padding:0 15px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}
+.chips button[aria-pressed=true]{background:var(--g);border-color:transparent;color:#1a1206}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px;margin:18px auto 26px;max-width:900px}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-align:center}
+.step i{font-style:normal;font-family:Marcellus,Georgia,serif;font-size:26px;line-height:1}
+.step b{display:block;font-size:15.5px;margin:6px 0 4px}
+.step p{color:var(--soft);font-size:14.5px;margin:0}
+.sub{text-align:center;margin:8px 0 0}
+.deck{display:flex;justify-content:center;gap:clamp(12px,3vw,26px);margin:26px 0 8px;perspective:900px}
+.tc{width:clamp(92px,22vw,140px);aspect-ratio:3/5;border:0;padding:0;background:none;cursor:pointer;position:relative;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.3,1.4,.5,1)}
+.tc:hover{transform:translateY(-8px)}.tc.flip{transform:rotateY(180deg)}.tc.dim{opacity:.25;pointer-events:none}
+.tc .f,.tc .b{position:absolute;inset:0;border-radius:12px;backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid #a0763a;box-shadow:0 16px 34px #000a;background:linear-gradient(180deg,#1c1619,#0e0b0f)}
+.tc .f::before,.tc .b::before{content:"";position:absolute;inset:6px;border:1px solid #e3b04b40;border-radius:8px}
+.tc .b svg{width:62%;stroke:var(--gold);fill:none;filter:drop-shadow(0 0 6px #e3b04b66)}
+.tc .f{transform:rotateY(180deg);padding:10px;gap:4px;text-align:center}
+.tc .f b{font-family:Marcellus,Georgia,serif;font-size:clamp(12px,2.8vw,16px);line-height:1.15;color:var(--ink)}
+.tc .f i{font-family:Marcellus,Georgia,serif;font-size:clamp(22px,5vw,32px);font-style:normal;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+.reveal{max-width:600px;margin:18px auto 40px;background:var(--panel2);border:1px solid #a0763a;border-radius:16px;padding:22px;text-align:center}
+.reveal .tag{color:var(--gold);font-weight:700;font-size:13px;letter-spacing:.04em}
+.reveal h3{margin:6px 0 10px;font-size:20px}
+.again{background:none;border:0;color:var(--soft);text-decoration:underline;cursor:pointer;font:600 14px Figtree,sans-serif;min-height:44px;display:block;margin:6px auto 0}
+.float{position:fixed;right:16px;bottom:16px;z-index:9;display:flex;align-items:center;gap:8px;background:#25d366;color:#06240f;font-weight:700;text-decoration:none;padding:0 18px;min-height:52px;border-radius:999px;box-shadow:0 10px 30px #000a}
+.foot{text-align:center;color:var(--soft);font-size:12.5px;padding:18px 16px 96px;border-top:1px solid var(--line)}
+.foot b{color:var(--gold);font-size:16px;white-space:nowrap;font-family:Marcellus,Georgia,serif;font-weight:600}
+.flame{transform-box:fill-box;transform-origin:50% 100%;animation:fl 2.4s ease-in-out infinite}
+@keyframes fl{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.12) skewX(-4deg)}}
+@media(max-width:600px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.tile{padding:14px 10px 16px}.tile h3{font-size:14.5px}.tile p{font-size:12.5px}.em{width:66%}.tile:last-child{grid-column:1/-1;flex-direction:row;text-align:left;gap:12px;padding:14px 18px}.tile:last-child .num{display:none}}
+.fan{position:relative;display:block;width:100%;height:clamp(150px,20vw,190px);margin:10px 0 12px}
+.fan img,.fan .cb{position:absolute;left:50%;bottom:0;width:34%;aspect-ratio:330/565;object-fit:cover;border-radius:6px;box-shadow:0 10px 24px #000c;border:1px solid #e3b04b66;transition:transform .35s}
+.fan .c0{transform:translateX(-112%) rotate(-12deg);transform-origin:bottom center}
+.fan .c1{transform:translateX(-50%);z-index:2;width:38%}
+.fan .c2{transform:translateX(12%) rotate(12deg);transform-origin:bottom center}
+.tile:hover .fan .c0{transform:translateX(-122%) rotate(-16deg)}.tile:hover .fan .c2{transform:translateX(22%) rotate(16deg)}
+.cb{background:linear-gradient(180deg,#5a0f26,#2a0812);background-image:radial-gradient(circle,#e3b04b 0 3px,transparent 4px),repeating-linear-gradient(45deg,#e3b04b22 0 1px,transparent 1px 9px),linear-gradient(180deg,#5a0f26,#2a0812)}
+.cover .fan{height:clamp(170px,26vw,230px);max-width:340px;margin:10px auto 14px}
+.thumb{width:40px;height:68px;object-fit:cover;border-radius:4px;flex:none;border:1px solid #e3b04b55;box-shadow:0 4px 10px #0008}
+.xs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:10px;margin:4px 0 12px}
+.xs div{background:#ffffff06;border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.xs b{color:var(--gold);font-size:14px}.xs p{margin:4px 0 0;font-size:14.5px;color:#d9cdb6}
+.tl{list-style:none;margin:22px auto 8px;padding:0;max-width:760px;position:relative}
+.tl::before{content:"";position:absolute;left:21px;top:8px;bottom:8px;width:1px;background:linear-gradient(var(--gold),#e3b04b22)}
+.tl li{display:flex;gap:16px;padding:0 0 18px;position:relative}
+.tl i,.mini i{font-style:normal;font-family:Marcellus,Georgia,serif;font-size:13px;width:43px;height:43px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--panel2);border:1px solid #a0763a;color:var(--gold);position:relative}
+.tl b{font-family:Marcellus,Georgia,serif;font-weight:600;font-size:17px;display:block;margin-top:9px}
+.tl p{color:var(--soft);margin:4px 0 0;font-size:15px}
+.cmp{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px;max-width:760px;margin:10px auto 16px}
+.cmp>div{display:flex;gap:14px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px}
+.cmp img{width:62px;height:106px;object-fit:cover;border-radius:5px;border:1px solid #e3b04b55;flex:none}
+.cmp b{font-family:Marcellus,Georgia,serif;font-size:17px}.cmp p{color:var(--soft);font-size:14.5px;margin:6px 0 0}
+.prep{max-width:760px;margin:0 auto 6px;background:var(--panel2);border:1px solid #a0763a;border-radius:14px;padding:16px 20px}
+.prep b{font-family:Marcellus,Georgia,serif;font-size:17px}.prep ul{margin:8px 0 0;padding-left:18px;color:#ddd1bb}.prep li{margin-bottom:5px}.prep li::marker{color:var(--gold)}
+.mini{list-style:none;padding:0;margin:20px auto 6px;max-width:760px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:10px}
+.mini li{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.mini b{font-family:Marcellus,Georgia,serif;font-size:16px;margin-top:8px}.mini p{color:var(--soft);font-size:14px;margin:4px 0 0}
+.tc .f img{position:absolute;inset:5px;width:calc(100% - 10px);height:calc(100% - 10px);object-fit:cover;border-radius:8px}
+@media(max-width:600px){.fan{height:140px}.tile:last-child .fan{width:110px;height:96px;margin:0;flex:none}}
+@media(prefers-reduced-motion:reduce){.flame{animation:none}.tc,.tile{transition:none}}
+</style>
+</head>
+<body>
+
+ 
+<div class="view" id="v-home">
+ <header class="top">
+  <div class="wrap">
+   <div class="brand">VOLKAN TAROT</div>
+   <h1 class="gt">Ne baktırmak istiyorsun?</h1>
+   <p>Bir karta dokun, içine gir. Nasıl baktığımızı gör, sana uygun olanı WhatsApp'tan iste.</p>
+   <div class="pills">
+    <span class="pill"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Sesli bakım</span>
+    <span class="pill"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></svg>Görüntülü bakım</span>
+    <span class="pill"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Telefonla, randevu ile</span>
+   </div>
+  </div>
+ </header>
+ <main class="wrap"><div class="tiles" id="tiles"></div></main>
+</div>
+
+<div class="view" id="v-cat" hidden></div>
+
+<footer class="foot">
+ <b>WhatsApp: 0535 041 67 78</b><br>
+ Tarot ve fal bakımları rehberlik ve farkındalık amaçlıdır; sağlık, hukuk ve finans konularında uzman desteğinin yerine geçmez.
+</footer>
+
+<a class="float" href="https://wa.me/905350416778?text=Merhaba%20Volkan%20Bey%2C%20bak%C4%B1m%20i%C3%A7in%20randevu%20almak%20istiyorum." target="_blank" rel="noopener" aria-label="WhatsApp'tan randevu al">
+ <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+ <span>Randevu al</span>
+</a>
+
+<script>
+const P=k=>"../kart/cards/"+k.replace(/^cups/,"c").replace(/^pents/,"p").replace(/^swords/,"s").replace(/^wands/,"w")+".jpg";
+{
+const WA='https://wa.me/905350416778?text=';
+const wa=t=>WA+encodeURIComponent('Merhaba, '+t+' baktırmak istiyorum.');
+const EM={
+iliski:'<path d="M50 82S18 63 18 40a15 15 0 0 1 32-7 15 15 0 0 1 32 7c0 23-32 42-32 42z"/><path d="M50 67S34 57 34 45a8 8 0 0 1 16-3 8 8 0 0 1 16 3c0 12-16 22-16 22z" opacity=".55"/><path d="M50 8v8M46 12h8M84 20l-4 4M16 20l4 4" opacity=".8"/>',
+tarot:'<rect x="17" y="28" width="28" height="46" rx="3" transform="rotate(-15 31 51)"/><rect x="55" y="28" width="28" height="46" rx="3" transform="rotate(15 69 51)"/><rect x="36" y="20" width="28" height="50" rx="3" fill="#121014"/><rect x="39.5" y="23.5" width="21" height="43" rx="2" opacity=".5"/><path d="M50 34l2.4 8.6 8.6 2.4-8.6 2.4L50 56l-2.4-8.6L39 45l8.6-2.4z" fill="currentColor" stroke="none"/><path d="M30 86h40" opacity=".6"/>',
+su:'<path d="M50 12c-6 9-9 14-9 18a9 9 0 0 0 18 0c0-4-3-9-9-18z" fill="currentColor" fill-opacity=".18"/><path d="M14 58h72c0 15-16 26-36 26S14 73 14 58z"/><ellipse cx="50" cy="58" rx="36" ry="7"/><ellipse cx="50" cy="58" rx="20" ry="3.6" opacity=".6"/><ellipse cx="50" cy="58" rx="7" ry="1.4" opacity=".6"/><path d="M38 88h24" opacity=".6"/>',
+mum:'<path class="flame" d="M50 36c-7-6-7-16 0-25 7 9 7 19 0 25z" fill="currentColor" stroke="none"/><path d="M50 36v7"/><rect x="39" y="43" width="22" height="40" rx="2"/><path d="M39 51c4 4 6-1 8 5s4-3 6 2 5-5 8-3" opacity=".7"/><path d="M26 87h48M32 83h36" opacity=".7"/><circle cx="50" cy="28" r="18" opacity=".18"/>',
+enerji:'<ellipse cx="50" cy="40" rx="17" ry="22"/><ellipse cx="50" cy="40" rx="12" ry="17" opacity=".5"/><path d="M43 30l10-6M42 38l15-10" opacity=".6"/><path d="M50 62v22M43 84h14"/>'+Array.from({length:11},(_,i)=>{const a=Math.PI*(-1.35+i*.17);return `<path d="M${(50+Math.cos(a)*27).toFixed(1)} ${(40+Math.sin(a)*31).toFixed(1)}L${(50+Math.cos(a)*35).toFixed(1)} ${(40+Math.sin(a)*39).toFixed(1)}" opacity=".7"/>`}).join(''),
+nasil:'<rect x="34" y="12" width="32" height="74" rx="6"/><path d="M45 17h10" opacity=".6"/><rect x="41" y="27" width="18" height="30" rx="2" opacity=".8"/><path d="M50 35l1.8 5.2L57 42l-5.2 1.8L50 49l-1.8-5.2L43 42l5.2-1.8z" fill="currentColor" stroke="none"/><circle cx="44" cy="72" r="3"/><circle cx="56" cy="72" r="3" fill="currentColor"/><path d="M74 38a14 14 0 0 1 0 22M81 32a23 23 0 0 1 0 34M26 38a14 14 0 0 0 0 22M19 32a23 23 0 0 0 0 34" opacity=".7"/>',
+kart:'<path d="M12 50s15-21 38-21 38 21 38 21-15 21-38 21-38-21-38-21z"/><circle cx="50" cy="50" r="11"/><circle cx="50" cy="50" r="4.5" fill="currentColor" stroke="none"/><path d="M50 12v9M50 79v9M22 20l6 6M78 20l-6 6M22 80l6-6M78 80l-6-6" opacity=".7"/>'};
+const CARD={'duygu-dusunce':'cups13',ask:'m06',uyum:'cups02','iliski-kontrol':'swords02','ucuncu-kisi':'swords07',evlilik:'cups10',ayrilik:'swords03','geri-donus':'cups06','yeni-ask':'cups12','ruh-esi':'cups01','ikiz-alev':'m17','gitmeli-kalmali':'cups08','evet-hayir':'m11',genel:'m19','is-kariyer':'pents08',maddiyat:'pents10','detayli-hayat':'m10','su-islem':'swords08','su-enerji':'m18','mum-nasil':'wands01','mum-isaret':'m09',aynalama:'m02','ruh-parcasi':'m20','disil-enerji':'m03','aura-temizligi':'m14','cakra-dengeleme':'m21','nazar-temizligi':'wands09','bereket-enerjisi':'pents09','ask-enerjisi':'cups02','ev-enerjisi':'wands04'};
+const FAN={iliski:['cups02','m06','cups10'],tarot:['m01','m10','m19'],'su-fali':['cups01','m17','m18'],'mum-fali':['wands01','m09','m19'],enerji:['m03','m02','m14'],nasil:['m11','m01','m21'],'kart-cek':['back','m00','back']};
+const fan=id=>`<span class="fan">${FAN[id].map((k,j)=>k==='back'?`<span class="cb c${j}"></span>`:`<img class="c${j}" src="${P(k)}" alt="" loading="lazy">`).join('')}</span>`;
+const NUM=['I','II','III','IV','V','VI','VII'];
+const emb=k=>`<svg viewBox="0 0 100 100" aria-hidden="true">${EM[k]}</svg>`;
+const I={heart:'<path d="M24 40S8 30 8 18a8 8 0 0 1 16-3 8 8 0 0 1 16 3c0 12-16 22-16 22z"/>',mind:'<circle cx="24" cy="20" r="11"/><path d="M18 36h12M20 41h8M19 20h10M24 15v10"/>',broken:'<path d="M24 40S8 30 8 18a8 8 0 0 1 16-3 8 8 0 0 1 16 3c0 12-16 22-16 22z"/><path d="m24 15-4 8 6 4-3 9"/>',road:'<path d="M24 42V24M24 24 12 10M24 24l12-14"/>',sun:'<circle cx="24" cy="24" r="8"/><path d="M24 6v5M24 37v5M6 24h5M37 24h5M11 11l3.5 3.5M33.5 33.5 37 37M37 11l-3.5 3.5M14.5 33.5 11 37"/>',work:'<rect x="8" y="16" width="32" height="22" rx="3"/><path d="M18 16v-4h12v4M8 26h32"/>',coin:'<ellipse cx="24" cy="14" rx="13" ry="5"/><path d="M11 14v8c0 3 6 5 13 5s13-2 13-5v-8M11 22v8c0 3 6 5 13 5s13-2 13-5v-8"/>',tree:'<circle cx="24" cy="24" r="17"/><path d="M24 7v34M7 24h34"/>',mirror:'<ellipse cx="24" cy="20" rx="11" ry="14"/><path d="M24 34v8M17 42h14M18 21l10-7"/>',soul:'<path d="M24 8c-8 6-12 12-12 18a12 12 0 0 0 24 0c0-6-4-12-12-18z"/><path d="M24 20v14M19 28l5-5 5 5"/>',moon:'<path d="M30 8a16 16 0 1 0 10 26A13 13 0 0 1 30 8z"/>',rings:'<circle cx="18" cy="28" r="10"/><circle cx="30" cy="28" r="10"/>',pulse:'<path d="M4 26h9l4-10 6 20 5-14 3 4h13"/>',eye:'<path d="M4 24s7-12 20-12 20 12 20 12-7 12-20 12S4 24 4 24z"/><circle cx="24" cy="24" r="5"/>',ret:'<path d="M14 18H32a8 8 0 0 1 0 16H18"/><path d="m20 12-6 6 6 6"/>',spark:'<path d="M24 6l3.5 11L38 20l-10.5 3.5L24 34l-3.5-10.5L10 20l10.5-3z"/>',mate:'<circle cx="16" cy="18" r="6"/><circle cx="32" cy="18" r="6"/><path d="M6 40c0-7 4-12 10-12s8 3 8 3 2-3 8-3 10 5 10 12"/>',flames:'<path d="M17 40c-6-4-6-12 0-22 2 5 5 7 5 12a5 5 0 0 1-5 10z"/><path d="M31 40c6-4 6-12 0-22-2 5-5 7-5 12a5 5 0 0 0 5 10z"/>',scale:'<path d="M24 6v34M14 40h20M10 14h28"/><path d="m10 14-5 12h10zM38 14l-5 12h10z"/>',drop:'<path d="M24 6C16 18 12 24 12 30a12 12 0 0 0 24 0c0-6-4-12-12-24z"/>',shield:'<path d="M24 6 38 12v12c0 9-6 15-14 18-8-3-14-9-14-18V12z"/>',flame:'<rect x="17" y="22" width="14" height="20" rx="2"/><path d="M24 19c-4-3-4-8 0-13 4 5 4 10 0 13z"/>',q:'<circle cx="24" cy="24" r="17"/><path d="M19 19a5 5 0 1 1 7 4.6c-1.3.6-2 1.6-2 3V29M24 34v1"/>'};
+const R=(id,i,t,s,d,l,qk,q,g,x)=>({id,i,t,s,d,l,qk,q,g,x});
+const cats=[
+{id:'iliski',art:'iliski',t:'İlişki açılımları',s:'Aşk, ayrılık, geri dönüş, ruh eşi',intro:'Sadece aşk ve ilişki konularına odaklanan bakımlar. Durumunu seç, sana uygun açılımlar listelensin. Birine dokun, içinde neye baktığımızı gör.',filter:true,items:[
+R('duygu-dusunce','mind','Duygu düşünce açılımı','Ne hissediyor, ne düşünüyor?','Aklındaki kişinin sana karşı neler hissettiğine ve hakkında neler düşündüğüne bakıyoruz.',['Kalbinde sana dair ne var?','Aklından neler geçiyor, seni nasıl görüyor?','Gösterdiği ile içinde yaşadığı farklı mı?','Bir adım atmaya niyeti var mı?'],'Örnek soru:','"Beni hâlâ düşünüyor mu?"','var'),
+R('ask','heart','Aşk açılımı','İlişkinin enerjisi ve geleceği','Mevcut ilişkinin ya da yeni başlayan bir yakınlaşmanın genel enerjisini ve geleceğini okuyoruz.',['Aranızdaki bağın gücü','İlişkiyi besleyen ve zorlayan konular','Önünüzdeki dönemde sizi neler bekliyor'],'Örnek soru:','"Bu ilişkinin bir geleceği var mı?"','var'),
+R('uyum','rings','Uyum açılımı','Birbirinize uygun musunuz?','İki kişinin enerjisini yan yana açar, ne kadar uyduğunuza bakarız.',['İkinizin ilişkiye getirdikleri','Ortak noktalarınız ve çatıştığınız yerler','Bu uyumun uzun vadede nereye gideceği'],'Örnek soru:','"Biz gerçekten birbirimize uygun muyuz?"','var'),
+R('iliski-kontrol','pulse','İlişki durum ve iletişim','Neden tartışıyoruz, nasıl toparlanır?','Süren bir ilişkinin bugünkü sağlığına bakarız: iletişim nerede kopuyor, kavgalar neden çıkıyor.',['İletişimi tıkayan konu','Tekrar eden tartışmaların kökü','İlişkiyi güçlendirmek için atılacak adım'],'Kimler için?','Son zamanlarda sık tartışan, birbirinden uzaklaşan çiftler için.','var'),
+R('ucuncu-kisi','eye','Araya giren var mı?','Üçüncü kişi, kıskançlık, dış etki','İlişkinde üçüncü bir kişinin, kıskançlığın ya da dış etkinin olup olmadığına bakarız.',['İlişkinize karışan biri var mı?','Aile, arkadaş ya da eski sevgili etkisi','Gizlenen bir şey var mı?'],'Örnek soru:','"Hayatında başka biri var mı?"','var'),
+R('evlilik','rings','Evlilik açılımı','Bu ilişki evliliğe gider mi?','Bir ilişkinin evliliğe gidip gitmediğine ya da evlilikte seni nelerin beklediğine bakarız.',['Bu ilişki evliliğe dönüşür mü?','Kararın zamanlaması','Ailelerin ve çevrenin etkisi'],'Örnek soru:','"Bizim evlilik yolumuz açık mı?"','var'),
+R('ayrilik','broken','Ayrılık açılımı','Neden bitti, şimdi ne hissediyor?','Ayrılık yaşadıysan ya da ilişki bitme noktasındaysa, neler olduğunu ve sonrasını anlamak için bakıyoruz.',['Ayrılığın gerçek sebebi','Karşı taraf şu an ne hissediyor?','Senin için en hayırlı yol'],'Örnek soru:','"Geri döner mi, yoksa yoluma mı bakmalıyım?"','ayrildi'),
+R('geri-donus','ret','Geri dönüş (barışma) açılımı','Bir daha bir araya gelir misiniz?','Ayrıldığın ya da küs olduğun biriyle yeniden bir araya gelme ihtimaline bakarız.',['Karşı tarafta pişmanlık ya da özlem var mı?','Dönüşü engelleyen asıl şey','Bu dönüş senin için hayırlı mı?'],'Örnek soru:','"Bir daha konuşur muyuz, barışır mıyız?"','ayrildi'),
+R('yeni-ask','spark','Yeni aşk açılımı','Hayatına kim girecek?','Bekarsan hayatına girecek kişinin enerjisine, özelliklerine ve aşka hazır olup olmadığına bakarız.',['Hayatına girecek kişi nasıl biri?','Onunla hangi ortamda karşılaşabilirsin?','Aşkı engelleyen şey ne?'],'Kimler için?','Bir süredir yalnız olan, yeni bir aşk bekleyenler için.','bekar'),
+R('ruh-esi','mate','Ruh eşi açılımı','Aranızda karmik bir bağ var mı?','Ruh eşi bağı, iki ruh arasındaki derin ve huzurlu bağı anlatır. Aklındaki kişiyle böyle bir bağ olup olmadığına ya da ruh eşinin nasıl biri olduğuna bakarız.',['Aranızdaki ruhsal bağın derinliği','Bu bağın sana öğrettiği ders','Geçmişten gelen bir bağ var mı?'],'Örnek soru:','"O benim ruh eşim mi?"','bekar'),
+R('ikiz-alev','flames','İkiz alev açılımı','Yoğun, gel-git, ayna gibi bir bağ','İkiz alev bağı yoğun, insana ayna tutan ve dönüştüren bir bağdır. Çekip uzaklaşmalar ve yeniden buluşmalar bu bağın parçasıdır.',['Bu bağ gerçekten ikiz alev mi?','Şu an hangi aşamadasınız?','Kendini korurken bu bağı nasıl yaşarsın'],'Kimler için?','Bir kişiyle açıklaması zor, çok yoğun bir bağ yaşayanlar için.','kararsiz'),
+R('gitmeli-kalmali','road','Gitmeli miyim, kalmalı mıyım?','İki yolu yan yana açıyoruz','İlişkide kararsız kaldığında iki yolu ayrı ayrı açıyor, her birinin sana neler getireceğini karşılaştırıyoruz.',['Kalırsan ilişki nasıl şekillenir?','Gidersen önünde nasıl bir yol açılır?','Seni bu ilişkide tutan asıl şey'],'Kimler için?','İki arada kalan, karar veremeyenler için.','kararsiz'),
+R('evet-hayir','scale','Evet / Hayır açılımı','Tek soruya net cevap','İlişkinle ilgili tek ve net bir soruya hızlı cevap aradığında kullandığımız kısa açılım.',['Tek soruya net cevap','Cevabın arkasındaki sebep','Sonucu değiştirebilecek etkenler'],'Örnek soru:','"Bu hafta beni arayacak mı?"','kararsiz')]},
+{id:'tarot',art:'tarot',t:'Tarot açılımları',s:'Genel, iş, para, detaylı hayat',intro:'Hayatının bir alanına ya da bütününe bakmak istediğinde kullandığımız açılımlar. Geçmişten gelen etkiler, bugünkü durum ve önündeki olasılıklar kartlarla okunur.',items:[
+R('genel','sun','Genel açılım','Hayatının şu anki genel akışı','Aşk, iş, para, aile ve ruh halin birlikte okunur.',['Şu an hayatında öne çıkan konu','Önündeki dönemin genel enerjisi','Yaklaşan fırsatlar ve haberler'],'Kimler için?','Belirli bir sorusu olmayan, genel olarak merak edenler için.'),
+R('is-kariyer','work','İş ve kariyer açılımı','İş değişikliği, terfi, yeni teklif','Çalışma hayatın, iş arayışın ya da kariyer planların üzerine yoğunlaşıyoruz.',['Mevcut işindeki durum ve çevren','Yeni teklifler ve değişiklikler','Kendi işini kurmak için doğru zaman mı?'],'Örnek soru:','"Yeni iş teklifi hayırlı mı?"'),
+R('maddiyat','coin','Maddiyat açılımı','Para akışı ve kazanç','Para, kazanç ve maddi düzen ile ilgili enerjine bakıyoruz.',['Paranın akışını tıkayan şey','Önündeki dönemde gelir ve kazanç','Dikkat etmen gerekenler'],'Örnek soru:','"Maddi olarak ne zaman rahatlayacağım?"'),
+R('detayli-hayat','tree','Detaylı hayat açılımı','En kapsamlı açılımımız','Hayatının bütün alanlarını tek tek ve derinlemesine açıyoruz.',['Geçmişten bugüne taşıdığın etkiler','Aşk, iş, para, aile ayrı ayrı','Önündeki aylarda seni bekleyenler'],'Kimler için?','Hayatına baştan sona bakmak isteyenler için.')]},
+{id:'su-fali',art:'su',t:'Su falı',s:'Üzerinde işlem ya da ağır enerji var mı?',intro:'Su, enerjiyi en saf hâliyle taşıyan ve yansıtan elementtir. Suyun üzerinde oluşan şekillere, hareketlere ve izlere bakarak senin enerjini okuyoruz.',items:[
+R('su-islem','drop','İşlem var mı bakımı','Büyü, bağlama, kapatma','Üzerinde yapılmış bir işlem olup olmadığına bakıyoruz.',['Üzerinde bir işlem var mı, yok mu?','Varsa hangi konuyu (aşk, iş, ev) etkiliyor?','Ne zamandan beri etkili?'],'Kimler için?','İşleri sürekli ters giden, yolları kapanmış gibi hissedenler için.'),
+R('su-enerji','shield','Ağır enerji ve nazar bakımı','Yorgunluk, tıkanıklık, nazar','Seni yoran, ağırlaştıran bir enerji ya da nazar olup olmadığına bakıyoruz.',['Üzerinde ağır bir enerji var mı?','Nazar ve kıskançlık etkisi','Sana hangi çalışmanın iyi geleceği'],'Kimler için?','Nedensiz bir ağırlık, yorgunluk ve isteksizlik hissedenler için.')]},
+{id:'mum-fali',art:'mum',t:'Mum falı',s:'Tek bir soruya, tek bir niyetle',intro:'Mum falı çoğunlukla tek bir soruya odaklanır. Sorunu net söylersin, mum bu niyetle yakılır ve yanışı boyunca alevin ve mumun verdiği işaretler yorumlanır.',items:[
+R('mum-nasil','flame','Mum falı nasıl yapılır?','Niyet, yakma ve okuma','Görüşmede önce sorunu netleştiriyoruz. Mum o tek niyetle yakılır ve sonuna kadar izlenir.',['Sorunu tek cümleyle belirleriz','Mum niyetinle yakılır','Alev ve eriyen mum baştan sona okunur'],'Örnek soru:','"Bu kişi bana geri dönecek mi?"'),
+R('mum-isaret','eye','Mumda neye bakıyoruz?','Alev, titreme, yön, is, şekiller','Mumun verdiği her işaretin bir anlamı vardır.',['Yüksek ve dik alev: güçlü, olumlu enerji','Kısık alev: engeller ve gecikme','Titreme, çıtırdama: araya giren etkiler','Alevin yönü: konunun kime doğru aktığı','İs ve kararma: ağır enerji','Eriyen mumun şekli: sonuç ve yol'],'Neden tek soru?','Mum tek bir niyetle yakılır; niyet ne kadar netse işaretler o kadar net okunur.')]},
+{id:'enerji',art:'enerji',t:'Enerji çalışmaları',s:'Aynalama, aura, çakra, nazar, bereket ve fazlası',intro:'Bakımda görülen ağır enerjiyi temizlemek, seni korumak ve iç gücünü yeniden açmak için yaptığımız çalışmalar.',pre:'enerji',items:[
+R('aynalama','mirror','Aynalama','Nazarı ve kötü enerjiyi geri yansıtır','Aynalama, enerji alanına bir ayna görevi görür. Dışarıdaki insanların senin üzerinde bıraktığı nazarı ve kötü enerjiyi senden alıp gönderen kişiye geri yansıtır.',['Nazar ve kıskançlıktan korunma','Gönderilen kötü niyeti geri çevirme','Enerji alanını koruma altına alma'],'Kimler için?','Sürekli nazar almış, yorgun ve yüklü hissedenler için.',null,[['Nasıl yapılır?','Önce kartlarla ya da su falıyla üzerindeki enerjiye bakılır. Ardından senin niyetinle enerji alanına bir ayna kalkanı kurulur; sana yönelen olumsuz enerji kaynağına geri döner.'],['Sonrasında','Çoğu kişi kendini daha hafif ve korunaklı hisseder. Gerekirse çalışma belli aralıklarla tazelenir.']]),
+R('ruh-parcasi','soul','Ruh parçası çalışması','Geçmişin yüklerini bırakmak','Geçmişten gelen anılarımızı ve yükleri üzerimizden atmakla ilgili bir çalışmadır. Kırgınlıklarda ve kayıplarda geride bıraktığımız enerjimizi geri çağırırız.',['Eski ilişkilerden kalan yükler','Bırakamadığın anılar ve kırgınlıklar','Kendini eksik ya da yarım hissetme'],'Kimler için?','Geçmişi bir türlü bırakamayan, hep aynı yere takılanlar için.',null,[['Nasıl yapılır?','Önce seni en çok yoran anı ya da dönem birlikte bulunur. Kartlarla o dönemde neyin geride kaldığına bakılır, ardından o enerji niyetle serbest bırakılıp sana geri çağrılır.'],['Sonrasında','Geçmişin ağırlığı hafifler, aynı döngülere takılma azalır, kendini daha bütün hissedersin.']]),
+R('disil-enerji','moon','Dişil enerji çalışması','Sezgi, duygu ve iç güç','Kadının sezgilerini, duygularını ve iç gücünü güçlendirmeye yönelik bir çalışmadır.',['Sezgilerinle yeniden bağ kurma','Duygusal denge ve özgüven','Çekim gücünü ve kendini sevmeyi açma'],'Kimler için?','Sezgilerinin köreldiğini, kendinden uzaklaştığını hisseden kadınlar için.',null,[['Nasıl yapılır?','Kartlarla dişil enerjinin hangi noktada tıkandığına bakılır. Ardından niyet, nefes ve odaklanma ile o enerji yeniden uyandırılır.'],['Sonrasında','Sezgilerin güçlenir, duygularını daha rahat ifade eder, kendine daha çok güvenirsin.']]),
+R('aura-temizligi','spark','Aura temizliği','Enerji alanını arındırmak','Aura, bedenimizi çevreleyen enerji alanıdır. Gün içinde girdiğimiz ortamlardan ve insanlardan gelen yükler auraya yapışır. Bu çalışmada aura arındırılır.',['Başkalarından üzerine geçen yükler','Kalabalık ve gergin ortamların ağırlığı','Sebepsiz yorgunluk ve isteksizlik'],'Kimler için?','İnsanlarla çok iç içe olan, akşamları tükenmiş hissedenler için.',null,[['Nasıl yapılır?','Önce auranın durumuna bakılır, sonra niyetle katman katman arındırılır ve koruma ile kapatılır.'],['Sonrasında','Daha hafif, daha berrak ve enerjik hissedebilirsin.']]),
+R('cakra-dengeleme','sun','Çakra dengeleme','Yedi enerji merkezini dengelemek','Bedenimizdeki yedi ana enerji merkezine çakra denir. Bir çakra tıkandığında ilişki, para ya da özgüven gibi alanlarda tıkanıklık yaşanabilir.',['Hangi çakranın tıkalı olduğu','O çakranın hayatında etkilediği alan','Enerji merkezlerinin yeniden dengelenmesi'],'Kimler için?','Hayatının belli bir alanında sürekli tıkanıklık yaşayanlar için.',null,[['Nasıl yapılır?','Kartlarla hangi çakranın zayıf ya da aşırı çalıştığına bakılır, ardından o merkez niyet ve odaklanma ile dengelenir.'],['Sonrasında','Tıkanan alanda akışın yeniden başladığını hissedebilirsin.']]),
+R('nazar-temizligi','shield','Nazar ve negatif enerji temizliği','Ağırlığı üzerinden atmak','Göz değmesi, kıskançlık ve kötü dileklerin bıraktığı ağır enerjinin temizlendiği çalışmadır.',['Nazarın kaynağı ve etkisi','Üzerindeki negatif enerjinin temizlenmesi','Sonrası için koruma'],'Kimler için?','İşleri birden ters gitmeye başlayan, sürekli şanssızlık yaşayanlar için.',null,[['Nasıl yapılır?','Su falı ya da kartlarla nazarın varlığına bakılır, ardından niyetle temizlik yapılır. İstersen arkasından Aynalama ile koruma eklenir.'],['Sonrasında','Üzerindeki ağırlık kalkar, işlerin yeniden yoluna girdiğini fark edebilirsin.']]),
+R('bereket-enerjisi','coin','Bolluk ve bereket enerjisi','Para ve kısmet yollarını açmak','Maddi akışın ve kısmetin önündeki tıkanıklıkları açmaya yönelik bir çalışmadır.',['Paranın akışını tıkayan enerji','Kısmet ve fırsat yollarının açılması','Bolluk bilincinin güçlenmesi'],'Kimler için?','Ne kadar çalışsa da maddi olarak rahatlayamayanlar için.',null,[['Nasıl yapılır?','Maddiyat açılımı ile tıkanıklığın sebebine bakılır, ardından niyetle bereket enerjisi açılır.'],['Sonrasında','Fırsatlara daha açık hale gelir, maddi konularda daha rahat hissedebilirsin.']]),
+R('ask-enerjisi','heart','Aşk ve çekim enerjisi','Kalbini ve çekim gücünü açmak','Aşkın hayatına girmesini engelleyen enerjileri temizleyip çekim gücünü açmaya yönelik bir çalışmadır.',['Kalbini kapatan eski kırgınlıklar','Aşkı engelleyen enerji blokajları','Çekim gücünün yeniden açılması'],'Kimler için?','Uzun süredir yalnız olan ya da hep yanlış kişileri çeken kişiler için.',null,[['Nasıl yapılır?','Önce aşk enerjinin hangi noktada tıkandığına bakılır, sonra kalp enerjisi temizlenip açılır.'],['Sonrasında','Kendini daha açık ve çekici hissedebilir, yeni bağlara daha hazır olursun.']]),
+R('ev-enerjisi','road','Ev ve mekân enerjisi temizliği','Yaşadığın yerin enerjisi','Evde ya da iş yerinde biriken ağır enerjinin temizlendiği çalışmadır.',['Evde sürekli huzursuzluk ve tartışma','Mekâna sinmiş eski ve ağır enerji','İş yerinde bereket ve akış'],'Kimler için?','Evine girince daralan, ailede sürekli gerginlik yaşayanlar için.',null,[['Nasıl yapılır?','Mekânın enerjisine bakılır, ardından görüntülü görüşme ile birlikte adım adım temizlik ve koruma yapılır.'],['Sonrasında','Evde daha huzurlu, ferah ve dengeli bir hava hissedilebilir.']])]},
+{id:'nasil',art:'nasil',t:'Bakımlar nasıl yapılır?',s:'Sesli ve görüntülü, telefonla',intro:'Bütün bakımlarımızı sesli ya da görüntülü olarak, telefonla arayarak yapıyoruz. Yazılı mesajla değil, birebir konuşarak ilerliyoruz.',how:true,items:[
+R('sss-secim','q','Hangi bakımı seçeceğimi bilmiyorum','Birlikte seçeriz','WhatsApp\'tan durumunu kısaca anlat, konuna en uygun açılımı birlikte seçelim.',[],'',''),
+R('sss-fark','q','Sesli ile görüntülü arasındaki fark','İkisi de birebir görüşme','Görüntülü bakımda kartların açılışını ekranda canlı görürsün; sesli bakımda kartlar sana tek tek okunur ve anlatılır.',[],'',''),
+R('sss-coklu','q','Birden fazla açılım yaptırabilir miyim?','Evet','Örneğin bir ilişki açılımının ardından su falı ile üzerindeki enerjiye de bakabiliriz. Randevu alırken belirtmen yeterli.',[],'',''),
+R('sss-ucret','q','Ücret ve süre ne kadar?','WhatsApp\'tan sorabilirsin','Seçtiğin bakıma ve açılım sayısına göre değişir. Güncel bilgiyi WhatsApp\'tan hemen paylaşıyoruz.',[],'','')]},
+{id:'kart-cek',art:'kart',t:'Ücretsiz kartını çek',s:'Niyet tut, kart sana mesaj versin',draw:true,intro:'Gözlerini kapat, aklındaki kişiyi ya da soruyu düşün. Hazır olduğunda üç karttan birine dokun. Kart sana kısa bir mesaj verecek, derinini bakımda birlikte açacağız.',items:[]}];
+const tiles=document.getElementById('tiles'),vh=document.getElementById('v-home'),vc=document.getElementById('v-cat');
+tiles.innerHTML=cats.map((c,i)=>`<a class="tile" href="#${c.id}"><span class="num">${NUM[i]}</span>${fan(c.id)}<div><h3 class="gt">${c.t}</h3><p>${c.s}</p></div>${c.items.length>1&&!c.how?`<span class="cnt">${c.items.length} seçenek</span>`:''}</a>`).join('');
+const item=x=>`<details id="${x.id}" data-g="${x.g||''}"><summary>${CARD[x.id]?`<img class="thumb" src="${P(CARD[x.id])}" alt="" loading="lazy">`:`<svg class="ic" viewBox="0 0 48 48" aria-hidden="true">${I[x.i]}</svg>`}<div><b>${x.t}</b><span>${x.s}</span></div></summary><div class="body"><p>${x.d}</p>${x.l.length?`<ul>${x.l.map(l=>`<li>${l}</li>`).join('')}</ul>`:''}${x.x?`<div class="xs">${x.x.map(y=>`<div><b>${y[0]}</b><p>${y[1]}</p></div>`).join('')}</div>`:''}${x.q?`<div class="q"><b>${x.qk}</b> ${x.q}</div>`:''}${x.qk?`<a class="btn" target="_blank" rel="noopener" href="${wa(x.t)}">Bunu baktırmak istiyorum</a>`:''}</div></details>`;
+const HOW=`<ol class="tl">${[
+['I','Bize yaz','WhatsApp hattımıza konunu kısaca anlat: aşk mı, iş mi, üzerindeki enerji mi? Hangi bakımı seçeceğini bilmiyorsan sorun değil, durumunu dinleyip sana en uygun açılımı birlikte seçiyoruz.'],
+['II','Randevunu ayarla','Sana uygun gün ve saati belirliyoruz. Sesli mi görüntülü mü olacağına sen karar veriyorsun. Bakım tamamen sana ayrılmış bir zaman diliminde yapılır.'],
+['III','Arama başlar','Belirlenen saatte telefonla görüşmeye başlıyoruz. Önce birkaç dakika konuşup sorunu netleştiriyoruz; niyet ne kadar netse kartlar o kadar net konuşur.'],
+['IV','Kartlar açılır','Deste senin niyetinle karıştırılır ve kartlar açılımın düzenine göre dizilir. Görüntülü bakımda her kartın açılışını kamerada canlı olarak görürsün.'],
+['V','Tek tek yorumlanır','Her kartın yerini, düz mü ters mi geldiğini ve diğer kartlarla ilişkisini açıklıyoruz. Aklına takılan her şeyi anında sorabilirsin.'],
+['VI','Yol ve tavsiye','Sadece ne olacağını değil, senin neler yapabileceğini de konuşuyoruz. Gerekirse su falı ya da bir enerji çalışması öneriyoruz.'],
+['VII','Sonrası','Bakımdan sonra aklına yeni bir soru gelirse ya da gelişmeleri paylaşmak istersen WhatsApp\'tan yazabilirsin.']].map(s=>`<li><i>${s[0]}</i><div><b>${s[1]}</b><p>${s[2]}</p></div></li>`).join('')}</ol>
+<div class="cmp"><div><img src="../kart/cards/m02.jpg" alt=""><div><b class="gt">Sesli bakım</b><p>Telefonla konuşarak yapılır. Kartlar sana tek tek okunur ve anlatılır. Kamera açmak istemeyenler ya da dışarıdayken baktırmak isteyenler için rahattır.</p></div></div><div><img src="../kart/cards/m01.jpg" alt=""><div><b class="gt">Görüntülü bakım</b><p>Görüntülü arama ile yapılır. Kartların karıştırılmasını, açılmasını ve dizilişini kendi gözünle canlı görürsün. Kartları kendi gözünle görmek isteyenler için en şeffaf yol.</p></div></div></div>
+<div class="prep"><b class="gt">Bakımdan önce</b><ul><li>Sessiz, rahat konuşabileceğin bir yer seç.</li><li>Sormak istediklerini önceden not al.</li><li>İlişki bakımlarında kişinin adını ve aranızdaki durumu hazırla.</li><li>Görüntülü bakım için şarjını ve internetini kontrol et.</li><li>Açık kalple gel; kartlar bazen duymak istediğini değil, bilmen gerekeni söyler.</li></ul></div>
+<h3 class="gt sub">Sık sorulanlar</h3>`;
+const ENR=`<ol class="mini"><li><i>I</i><b>Tespit</b><p>Önce kartlarla ya da su falıyla üzerindeki enerjiye bakılır, neye ihtiyacın olduğu belirlenir.</p></li><li><i>II</i><b>Çalışma</b><p>Sana uygun çalışma, görüşme sırasında senin niyetinle birlikte yapılır.</p></li><li><i>III</i><b>Koruma</b><p>Temizlenen enerji alanın korumayla kapatılır, nelere dikkat etmen gerektiğini konuşuruz.</p></li></ol>`;
+const steps=[['WhatsApp\'tan yaz','Hangi bakımı istediğini ya da konunu kısaca anlat.'],['Randevunu ayarla','Gün ve saati belirleriz. Sesli mi görüntülü mü, sen seçersin.'],['Telefonla bakım','Belirlenen saatte arıyoruz. Görüntülüde kartları canlı görürsün.'],['Soruların cevaplanır','Her kartı açıklarız, merak ettiklerini sorarsın.']];
+const MA=[['0','Deli','Yeni bir başlangıç kapında. Korkmadan adım atma zamanı.','Yeni aşk açılımı'],['I','Büyücü','Elinde ihtiyacın olan her şey var. Niyetini ortaya koyarsan sonuç alırsın.','Genel açılım'],['II','Azize','Sezgilerin sana bir şey fısıldıyor. Gizli bir konu açığa çıkabilir.','Duygu düşünce açılımı'],['III','İmparatoriçe','Bereket ve sevgi enerjisi yükseliyor.','Aşk açılımı'],['IV','İmparator','Düzen kurma zamanı. Net sınırlar çizmen gereken bir konu var.','İş ve kariyer açılımı'],['V','Aziz','Bir söz ya da resmi bir adım gündemde.','Evlilik açılımı'],['VI','Âşıklar','Kalbinle aklın arasında bir seçim var.','Gitmeli miyim, kalmalı mıyım?'],['VII','Savaş Arabası','Zorlukları aşıp ilerleyeceğin bir dönem.','İş ve kariyer açılımı'],['VIII','Güç','Sabrın ve yumuşak gücün her şeyi çözer.','Dişil enerji çalışması'],['IX','Ermiş','Cevabı kendinde bulma zamanı.','Ruh parçası çalışması'],['X','Kader Çarkı','Çark dönüyor, beklemediğin bir değişim kapıda.','Detaylı hayat açılımı'],['XI','Adalet','Bekleyen bir karar ya da hesaplaşma var.','Evet / Hayır açılımı'],['XII','Asılan Adam','Bir şey askıda. Bakış açını değiştirdiğinde cevap gelecek.','Duygu düşünce açılımı'],['XIII','Ölüm','Bir dönem kapanıyor ki yenisi açılsın.','Ayrılık açılımı'],['XIV','Denge','Aranızdaki enerji yavaş yavaş dengeye geliyor.','Uyum açılımı'],['XV','Şeytan','Seni bağlayan, tüketen bir enerji olabilir.','Su falı'],['XVI','Kule','Ani bir sarsıntı ya da gerçeğin ortaya çıkışı.','Araya giren var mı? açılımı'],['XVII','Yıldız','Umut geri geliyor, iyileşme ve yeni bir ışık var.','Geri dönüş açılımı'],['XVIII','Ay','Her şey göründüğü gibi olmayabilir.','Araya giren var mı? açılımı'],['XIX','Güneş','Güzel bir haber ya da sevindirici bir gelişme yakın.','Genel açılım'],['XX','Mahkeme','Geçmişten biri ya da bir konu yeniden gündeme gelebilir.','Geri dönüş açılımı'],['XXI','Dünya','Bir döngü tamamlanıyor, emeklerinin karşılığı geliyor.','Detaylı hayat açılımı']];
+const back='<svg viewBox="0 0 60 60" stroke-width="1.2"><circle cx="30" cy="30" r="14"/><circle cx="30" cy="30" r="22" opacity=".5"/><path d="M30 4 33 27 56 30 33 33 30 56 27 33 4 30 27 27z" fill="#e3b04b" fill-opacity=".25"/></svg>';
+const deal=()=>{const d=document.getElementById('deck');if(!d)return;d.dataset.done='';d.innerHTML=[1,2,3].map(i=>`<button type="button" class="tc" aria-label="${i}. kartı çek"><span class="b">${back}</span><span class="f"></span></button>`).join('');document.getElementById('reveal').hidden=true;};
+const show=c=>{
+ vh.hidden=true;vc.hidden=false;
+ vc.innerHTML=`<div class="cover"><a class="back" href="#">← Tüm bakımlar</a>${fan(c.id)}<span class="num">${NUM[cats.indexOf(c)]}</span><h2 class="gt">${c.t}</h2></div>
+ <div class="wrap"><p class="intro">${c.intro}</p>
+ ${c.filter?`<div class="chips" id="chips"><button type="button" data-g="" aria-pressed="true">Hepsi</button><button type="button" data-g="var" aria-pressed="false">İlişkim var</button><button type="button" data-g="ayrildi" aria-pressed="false">Ayrıldık</button><button type="button" data-g="bekar" aria-pressed="false">Bekarım</button><button type="button" data-g="kararsiz" aria-pressed="false">Kararsızım</button></div>`:''}
+ ${c.how?HOW:''}${c.pre==='enerji'?ENR:''}
+ ${c.draw?`<div class="deck" id="deck"></div><div class="reveal" id="reveal" aria-live="polite" hidden></div>`:''}
+ <div class="list">${c.items.map(item).join('')}</div></div>`;
+ if(c.filter)vc.querySelector('#chips').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+  vc.querySelectorAll('#chips button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  vc.querySelectorAll('.list details').forEach(d=>d.hidden=b.dataset.g&&d.dataset.g!==b.dataset.g);});
+ if(c.draw)deal();
+};
+vc.addEventListener('click',e=>{
+ const b=e.target.closest('.tc');if(b){const d=document.getElementById('deck');if(d.dataset.done)return;d.dataset.done='1';
+  const m=MA[Math.floor(Math.random()*MA.length)];
+  b.querySelector('.f').innerHTML=`<img src="../kart/cards/m${String(MA.indexOf(m)).padStart(2,'0')}.jpg" alt="${m[1]} kartı">`;b.classList.add('flip');
+  d.querySelectorAll('.tc').forEach(x=>{if(x!==b)x.classList.add('dim')});
+  setTimeout(()=>{const r=document.getElementById('reveal');r.hidden=false;r.innerHTML=`<span class="tag">Senin kartın: ${m[1]}</span><h3>Kartın sana bir mesaj veriyor</h3><p>${m[2]}</p><p>Bu kart sadece başlangıç. Ne anlattığını tam görmek için önerimiz: <b>${m[3]}</b>.</p><a class="btn" target="_blank" rel="noopener" href="${WA+encodeURIComponent('Merhaba, sitenizde '+m[1]+' kartını çektim. '+m[3]+' baktırmak istiyorum.')}">Kartımı bakımda açalım</a><button type="button" class="again">Yeniden çek</button>`;},850);return;}
+ if(e.target.closest('.again'))deal();
+});
+const route=()=>{
+ const h=location.hash.slice(1);
+ let c=cats.find(x=>x.id===h),open=null;
+ if(!c){for(const x of cats){const it=x.items.find(i=>i.id===h);if(it){c=x;open=h;break;}}}
+ if(!c){vc.hidden=true;vh.hidden=false;window.scrollTo(0,0);return;}
+ show(c);window.scrollTo(0,0);
+ if(open){const d=document.getElementById(open);d.open=true;setTimeout(()=>d.scrollIntoView({block:'center'}),60);}
+};
+addEventListener('hashchange',route);route();
+}
+</script>
+</body>
+</html>
